@@ -1,33 +1,6 @@
 ## Getting Started
 
-### System Requirements:
-
-Node.JS >= 0.10.* 
-npm >=1.4.3 
-
-[GitHub manual page - Installing-Node.js](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
-
-### Installation gulp:
-
-globally:
-
-```
-npm install -g gulp
-```
-
-in your project devDependencies:
-
-```
-npm install --save-dev gulp
-```
-
-### Create a `gulpfile.js`, 'dist/', 'build/' at the root of your project:
-
-```
-mkdir dist build
-touch gulpfile.js
-```
-
+### Architecture project
 ```
 |--/bower_components // Components from bower
 |--/build // Productions
@@ -47,6 +20,32 @@ touch gulpfile.js
 |--|--/sass
 |--package.json
 |--gulpfile.js
+```
+
+### System Requirements:
+
+```
+Node.JS >= 0.10.* 
+npm >=1.4.3 
+````
+[GitHub manual page - Installing-Node.js](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
+
+### Installation gulp:
+
+globally:
+```
+npm install -g gulp
+```
+in your project devDependencies:
+```
+npm install --save-dev gulp
+```
+
+### Create a `gulpfile.js`, 'dist/', 'build/' at the root of your project:
+
+```
+mkdir dist build
+touch gulpfile.js
 ```
 
 gulpfile.js:
