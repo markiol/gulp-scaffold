@@ -1,23 +1,46 @@
-## Getting Started
+## Приступая к работе
 
-### Architecture project
+### Архитектура предполагаемого проекта
+В проекте предполагается использовать bower и npm, и т.д.:
 ```
-|--/bower_components // Components from bower
-|--/build // Productions
+|--/bower_components // компоненты bower
+|--/node_moduled // компоненты npm
+```
+Вести разработку предполагается в scripts/ и styles/ на чем угодно:
+```
+|--/scripts
+|--|--styles.js
+|--|--styles.coffee
+|--/styles
+|--|--styles.css
+|--|--styles.less
+|--|--styles.styles
+```
+На выходе(сдача проекте), предполагается получить продукт:
+```
+|--/productions
 |--|--/index.html
 |--|--/styles.css
 |--|--/scripts.js
-|--/dist // Compiled components
+|--|--/fonts
+|--|--|--/fonts.eot
+|--|--|--/fonts.svg
+|--|--|--/fonts.ttf
+|--|--|--/fonts.woff
+```
+**Пару слов о шрифтах:**
+####Разные типы шрифтов поддерживаются разными браузерами.
+####Универсального формата, увы, нет. Приходится держать пачку файлов.
+
+####Со шрифтами еще не известно все, пока пусть будет так(оставим этот момент).
+
+[Тест пишу и спользоанием разметки md](https://help.github.com/articles/markdown-basics)
+```
+|--/dist // Compiled components (non min)
 |--|--/css
 |--|--/fonts
 |--|--/img
 |--|--/js
-|--/node_moduled // Components from npm
-|--/not_compiled // Directory for development
-|--|--/coffee
-|--|--/less
-|--|--/styles
-|--|--/sass
 |--package.json
 |--gulpfile.js
 ```
