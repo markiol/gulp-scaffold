@@ -1,24 +1,34 @@
-## Слово к участникам
+## Вступление
 
-### Необходимые требования к участнику
+#### Необходимые требования к участнику
 	- Компьютер с доступом в интерент, email ящик;
 	- Знать в достаточной степени: git, html, css, js.
 
-### Рекомендуемые требования
-	- Иметь компьютер с unix shell и доступом в интернет;
+#### Рекомендуемые требования
+	- Компьютер с posix comand line интерфейсом;
+	- Превосходно знать: git, html, css, js.
 	- Текстовый редактор sublime text;
-	- Быть знакомым с node.js и его менеджером npm;
-	- Знать что такое bower и для чего он нужен;
-	- Использовать и участвовать в предложения. 
 
-## Приступая к проекту
+## Приступая к работе
 
-### Файловую структура
-В проекте предполагается использовать bower и npm, и т.д.:
+### Для ознакомления
+В проекте предполагается использовать npm, bower и gulp:
 ```
-|--/bower_components // компоненты bower
-|--/node_moduled // компоненты npm
+|--/bower_components // директория для компонентов bower
+|--/node_moduled // директория для компонентов npm
+|--bower.json
+|--package.json
+|--gulpfile.js
 ```
+Для того чтобы использовать npm, bower и gulp потребуется установленый node.js
+```
+Node.JS >= 0.10.* 
+npm >=1.4.3 
+````
+[О том как установить node.js](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
+
+Вести разработку на html, css, js не всегда удобно, поэтому используем предпроцессоры
+
 Вести разработку предполагается в scripts/ и styles/ на чем угодно:
 ```
 |--/development
@@ -44,56 +54,34 @@
 ```
 готовый продукт* - значит минимизиированый, сконкатинированый, обфусцированый
 
-**Пару слов о шрифтах:**
-*Разные типы шрифтов поддерживаются разными браузерами.*
-*Универсального формата, увы, нет. Приходится держать пачку файлов.*
+О том как минимизиировать, сконкатинировать, и обфусцировать:
+Для минимизации, сконкатининации, и обфускации будем использовать gulp;
+А как именно написано [сдесь](http://habrahabr.ru/post/208890/)
 
-*Со шрифтами еще не известно все, пока пусть будет так(оставим этот момент).*
+### С этого момента можно присутпать
 
-[Посмотрите ввидео о языке разметки Markdown *рус*](http://www.youtube.com/user/ArtSorax?feature=watch)
-
-[Тест пишу и спользоанием разметки md](https://help.github.com/articles/markdown-basics)
-
-<a href="http://daringfireball.net/">http://daringfireball.net/</a>
-
-Дальше текст неотформатированый, проссто накидано всякой ерунды, можете не читать...
+Я начну с создании деректорий под проект:
 ```
-|--/dist // Compiled components (non min)
-|--|--/css
-|--|--/fonts
-|--|--/img
-|--|--/js
-|--package.json
-|--gulpfile.js
+cd ~/Project
+mkdir development development/scripts development/styles productions productions/fonts
 ```
+Директории bower_components и node_moduled создавать не нужно, т.к. они сами будут создани.
+Еще не нужно создавать bower.json и package.json, их лучше создать командой:
+```
+npm init
+```
+После ввода данной командыя я обычно выжимаю клавишу Enter до упора
+Ошибок не возникает, выставляется по дефолту, если что можно отредактировать после
 
-### System Requirements:
-
+Сейчас поставим npm пакеты bower и gulp
 ```
-Node.JS >= 0.10.* 
-npm >=1.4.3 
-````
-[GitHub manual page - Installing-Node.js](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
-
-### Installation gulp:
-
-globally:
-```
-npm install -g gulp
-```
-in your project devDependencies:
-```
-npm install --save-dev gulp
+npm install --save-dev bower gulp
 ```
 
-### Create a `gulpfile.js`, 'dist/', 'build/' at the root of your project:
+Создавать gulpfile.js с содержимым:
+`touch gulpfile.js`
 
-```
-mkdir dist build
-touch gulpfile.js
-```
-
-gulpfile.js:
+содержимое gulpfile.js:
 
 ```javascript
 var gulp = require('gulp');
