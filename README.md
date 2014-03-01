@@ -105,12 +105,6 @@ gulp
 
 ## Что дальше?
 
-У вас есть пустой gulpfile и у вас все установлено. Вы ГОТОВЫ приступить к самому интересному? Проверьте [recipes and articles section](README.md#articles-and-recipes) для подробной информации
+У вас есть пустой gulpfile и у вас все установлено? Значит вы готовы приступить к самому интересному. Подробная информация будет после того как это все сам проделаю. Ждите :)
 
-## .src, .watch, .dest, CLI args - How do I use these things?
-
-For API specific documentation you can check out the [documentation for that](API.md)
-
-## Available Plugins
-
-The gulp community is growing, with new plugins being added daily. See the [main website](http://gulpjs.com/) for a complete list.
+[Официальный сайт GulpJS](http://gulpjs.com/)
