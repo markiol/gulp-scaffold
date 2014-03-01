@@ -1,27 +1,51 @@
-## Install gulp
+## Getting Started
 
-### 1.0 Install Node.JS:
+### System Requirements:
 
-[GitHub page manual](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
+Node.JS >= 0.10.* 
+npm >=1.4.3 
 
-### 1.1 Install gulp globally:
+[GitHub manual page - Installing-Node.js](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
+
+### Installation gulp:
+
+globally:
 
 ```
 npm install -g gulp
 ```
 
-### 1.2 Install gulp in your project devDependencies:
+in your project devDependencies:
 
 ```
-npm init
 npm install --save-dev gulp
 ```
 
-### 2. Create a `gulpfile.js` at the root of your project:
+### Create a `gulpfile.js`, 'dist/', 'build/' at the root of your project:
 
 ```
+mkdir dist build
 touch gulpfile.js
 ```
+
+|--/bower_components // Components from bower
+|--/build // Productions
+|--|--/index.html
+|--|--/styles.css
+|--|--/scripts.js
+|--/dist // Compiled components
+|--|--/css
+|--|--/fonts
+|--|--/img
+|--|--/js
+|--/node_moduled // Components from npm
+|--/not_compiled // Directory for development
+|--|--/coffee
+|--|--/less
+|--|--/styles
+|--|--/sass
+|--package.json
+|--gulpfile.js
 
 gulpfile.js:
 
