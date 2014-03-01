@@ -28,6 +28,7 @@ mkdir dist build
 touch gulpfile.js
 ```
 
+```
 |--/bower_components // Components from bower
 |--/build // Productions
 |--|--/index.html
@@ -46,6 +47,7 @@ touch gulpfile.js
 |--|--/sass
 |--package.json
 |--gulpfile.js
+```
 
 gulpfile.js:
 
