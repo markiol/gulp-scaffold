@@ -12,6 +12,9 @@
 ## Приступая к работе
 
 ### Для ознакомления
+
+#### Файловая структура и некоторые особенности
+
 В проекте предполагается использовать npm, bower и gulp:
 ```
 |--/bower_components // директория для компонентов bower
@@ -70,8 +73,8 @@ mkdir development development/scripts development/styles productions productions
 ```
 npm init
 ```
-После ввода данной командыя я обычно выжимаю клавишу Enter до упора
-Ошибок не возникает, выставляется по дефолту, если что можно отредактировать после
+После ввода данной командыя я обычно выжимаю клавишу Enter до упора, 
+-ошибок не возникает, выставляется по дефолту, если что можно отредактировать после.
 
 Сейчас поставим npm пакеты bower и gulp
 ```
@@ -87,23 +90,22 @@ npm install --save-dev bower gulp
 var gulp = require('gulp');
 
 gulp.task('default', function(){
-  // place code for your default task here
+  // задача которая будет срабатывать 
 });
 ```
-
-### 3. Run gulp
-
+для запуска просто:
 ```
 gulp
 ```
+Сработает задача которая будет указана на месте комментария
 
-The default task will run and do nothing.
+Еще можно запускать задачи используя параметры `gulp <task> <othertask>`
 
-To run individual tasks, use `gulp <task> <othertask>`
+На этом тут я окончу
 
-## Where do I go now?
+## Что дальше?
 
-You have an empty gulpfile and everything is installed. How do you REALLY get started? Check out the [recipes and articles section](README.md#articles-and-recipes) for more information
+У вас есть пустой gulpfile и у вас все установлено. Вы ГОТОВЫ приступить к самому интересному? Проверьте [recipes and articles section](README.md#articles-and-recipes) для подробной информации
 
 ## .src, .watch, .dest, CLI args - How do I use these things?
 
