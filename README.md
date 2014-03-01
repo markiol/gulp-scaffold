@@ -1,18 +1,29 @@
-## Getting Started
+## Install gulp
 
-### 1. Install gulp globally:
+### 1.0 Install Node.JS:
+
+[GitHub page manual](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
+
+### 1.1 Install gulp globally:
 
 ```
 npm install -g gulp
 ```
 
-### 2. Install gulp in your project devDependencies:
+### 1.2 Install gulp in your project devDependencies:
 
 ```
+npm init
 npm install --save-dev gulp
 ```
 
-### 3. Create a `gulpfile.js` at the root of your project:
+### 2. Create a `gulpfile.js` at the root of your project:
+
+```
+touch gulpfile.js
+```
+
+gulpfile.js:
 
 ```javascript
 var gulp = require('gulp');
@@ -22,7 +33,7 @@ gulp.task('default', function(){
 });
 ```
 
-### 4. Run gulp
+### 3. Run gulp
 
 ```
 gulp
